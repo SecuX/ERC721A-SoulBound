@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "deploy": "npx hardhat ignition deploy ignition/modules/deploy.js --network mumbai",
+    "issue": "npx hardhat ignition deploy ignition/modules/issue.js --network mumbai",
     "set:issuer": "npx hardhat ignition deploy ignition/modules/setIssuer.js --network mumbai",
     "test": "npx hardhat test",
     "test:deploy": "npx hardhat ignition deploy ignition/modules/deploy.js"

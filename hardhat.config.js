@@ -3,6 +3,11 @@ require("@nomicfoundation/hardhat-toolbox");
 require("@nomicfoundation/hardhat-ignition-ethers");
 dotenv.config();
 
+const accounts = [
+    process.env.OWNER_PRIVATE_KEY,
+    process.env.ISSUER_PRIVATE_KEY
+];
+
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
     solidity: {
@@ -17,11 +22,11 @@ module.exports = {
     networks: {
         sepolia: {
             url: "https://rpc.ankr.com/eth_sepolia",
-            accounts: [process.env.OWNER_PRIVATE_KEY]
+            accounts
         },
         mumbai: {
             url: "https://rpc.ankr.com/polygon_mumbai",
-            accounts: [process.env.OWNER_PRIVATE_KEY]
+            accounts
         }
     }
 };
