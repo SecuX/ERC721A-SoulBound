@@ -1,5 +1,7 @@
+const dotenv = require("dotenv");
 require("@nomicfoundation/hardhat-toolbox");
 require("@nomicfoundation/hardhat-ignition-ethers");
+dotenv.config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -12,4 +14,14 @@ module.exports = {
             },
         },
     },
+    networks: {
+        sepolia: {
+            url: "https://rpc.ankr.com/eth_sepolia",
+            accounts: [process.env.OWNER_PRIVATE_KEY]
+        },
+        mumbai: {
+            url: "https://rpc.ankr.com/polygon_mumbai",
+            accounts: [process.env.OWNER_PRIVATE_KEY]
+        }
+    }
 };

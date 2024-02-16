@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "deploy": "npx hardhat ignition deploy ignition/modules/ERC721ASoulBound.js --network mumbai",
     "test": "npx hardhat test",
-    "deploy": "npx hardhat ignition deploy ignition/modules/ERC721ASoulBound.js"
+    "test:deploy": "npx hardhat ignition deploy ignition/modules/ERC721ASoulBound.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition-ethers": "^0.13.2",
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "dotenv": "^16.4.4",
     "hardhat": "^2.20.0"
   }
 }
